@@ -1,4 +1,4 @@
-setwd('C:/Users/Iva/Desktop/Habil/COMPL CLAUSES/gigaword/stats')
+setwd('../stats')
 
 getwd()
 # Install required packages (run once)
