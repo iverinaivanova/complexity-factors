@@ -1,1 +1,107 @@
+### Fixed-effects model ###
+
+Family: bernoulli 
+  Links: mu = logit 
+Formula: clause_numeric ~ negation + passivization + modalV + noun.mod + quantifier + AdvCl + CompCl + AdnomCl + Adv + More.than.1.Adv + More.than.5.Less.than.10.Const + More.than.10.Const + supplement 
+   Data: data (Number of observations: 17743) 
+  Draws: 4 chains, each with iter = 4000; warmup = 2000; thin = 1;
+         total post-warmup draws = 8000
+
+Regression Coefficients:
+                               Estimate Est.Error l-95% CI u-95% CI Rhat  
+Intercept                          2.04      0.04     1.97     2.11 1.00
+negation                          -0.82      0.07    -0.97    -0.68 1.00
+passivization                     -0.80      0.08    -0.96    -0.64 1.00
+modalV                            -2.13      0.08    -2.28    -1.98 1.00
+noun.mod                          -0.29      0.05    -0.39    -0.19 1.00
+quantifier                        -0.02      0.05    -0.12     0.09 1.00
+AdvCl                              0.31      0.08     0.15     0.47 1.00
+CompCl                             2.42      0.10     2.24     2.61 1.00
+AdnomCl                           -0.05      0.11    -0.26     0.16 1.00
+Adv                               -0.56      0.05    -0.66    -0.46 1.00
+More.than.1.Adv                   -0.38      0.07    -0.53    -0.24 1.00
+More.than.5.Less.than.10.Const    -0.29      0.05    -0.39    -0.19 1.00
+More.than.10.Const                -0.38      0.08    -0.53    -0.22 1.00
+supplement                        -0.27      0.15    -0.56     0.01 1.00
+                               Bulk_ESS Tail_ESS
+Intercept                         12174     6822
+negation                          10633     6513
+passivization                     10139     5658
+modalV                             9378     6841
+noun.mod                           9400     5824
+quantifier                        10313     6115
+AdvCl                              9545     5693
+CompCl                             7563     6051
+AdnomCl                            9711     6072
+Adv                                8641     6881
+More.than.1.Adv                    8730     6341
+More.than.5.Less.than.10.Const     8254     6049
+More.than.10.Const                 8083     6330
+supplement                         9507     6038
+
+Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
+and Tail_ESS are effective sample size measures, and Rhat is the potential
+scale reduction factor on split chains (at convergence, Rhat = 1).
+
+
+### Effect Size based on Odds Ratios (OR) ###
+
+			                Predictor  Coefficient 	 OR (that-cl) 	95% CrI Lower
+                       negation      -0.823         2.28          1.97
+                  passivization      -0.802         2.23          1.90
+                         modalV      -2.129         8.40          7.22
+                       noun.mod      -0.291         1.34          1.21
+                     quantifier      -0.017         1.02          0.91
+                        AdnomCl      -0.052         1.05          0.86
+                            Adv      -0.556         1.74          1.58
+                More.than.1.Adv      -0.384         1.47          1.27
+ More.than.5.Less.than.10.Const      -0.292         1.34          1.21
+             More.than.10.Const      -0.378         1.46          1.25
+                     supplement      -0.273         1.31          0.99
+
+ 95% CrI Upper % Decrease in Odds (to-inf) Strength
+          2.62                       56.11 Moderate
+          2.61                       55.15 Moderate
+          9.77                       88.10   Strong
+          1.47                       25.28     Weak
+          1.13                        1.67     Weak
+          1.30                        5.08     Weak
+          1.93                       42.67     Weak
+          1.69                       31.90     Weak
+          1.48                       25.32     Weak
+          1.70                       31.50     Weak
+          1.75                       23.85     Weak
+
+
+
+### Interaction model estimates ###
+
+				                        Interactions  	Coefficient 	  OR (that-cl)
+                                      
+                            negation:noun.mod      -0.065         1.07
+                       passivization:noun.mod      -0.206         1.23
+                            passivization:Adv      -0.014         1.01
+                passivization:More.than.1.Adv      -0.182         1.20
+ passivization:More.than.5.Less.than.10.Const      -0.121         1.13
+             passivization:More.than.10.Const      -0.164         1.18
+                              modalV:noun.mod      -0.378         1.46
+      More.than.5.Less.than.10.Const:noun.mod      -0.095         1.10
+                  More.than.10.Const:noun.mod      -0.172         1.19
+ 
+
+
+
+
+95% CrI Lower 95% CrI Upper    % Decrease in Odds (to-inf) Strength
+       
+          0.81          1.42                        6.27     Weak
+          0.88          1.73                       18.60     Weak
+          0.72          1.43                        1.44     Weak
+          0.72          2.00                       16.60     Weak
+          0.80          1.60                       11.42     Weak
+          0.75          1.90                       15.12     Weak
+          1.10          1.94                       31.48     Weak
+          0.90          1.33                        9.03     Weak
+          0.81          1.75                       15.84     Weak
+
 
