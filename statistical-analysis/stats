@@ -76,7 +76,7 @@ scale reduction factor on split chains (at convergence, Rhat = 1).
 
 ### Interaction model estimates ###
 
-				                        Interactions  	Coefficient 	  OR (that-cl)
+			         Interactions  	Coefficient 	  OR (that-cl)
                                       
                             negation:noun.mod      -0.065         1.07
                        passivization:noun.mod      -0.206         1.23
