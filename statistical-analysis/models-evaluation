@@ -8,4 +8,41 @@ k < 0.5: Very good, highly reliable.
 k ≥ 1: Unreliable, indicating that PSIS fails for those points, and exact LOO-CV or model refitting may be needed.
 
 
+### Evaluation of the predictive performance of the fixed-effects model ###
 
+Computed from 8000 by 17743 log-likelihood matrix.
+
+         Estimate    SE
+elpd_loo  -7235.9  79.8
+p_loo        15.0   0.3
+looic     14471.8 159.6
+------
+MCSE of elpd_loo is 0.0.
+MCSE and ESS estimates assume MCMC draws (r_eff in [0.9, 1.6]).
+
+All Pareto k estimates are good (k < 0.7).
+See help('pareto-k-diagnostic') for details.
+
+> summary(pareto_k)
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+-0.28599 -0.10667 -0.09415 -0.07426 -0.03497  0.15538 
+
+### Evaluation of the predictive performance of the interaction model ###
+
+Computed from 8000 by 17743 log-likelihood matrix.
+
+         Estimate    SE
+elpd_loo  -7698.0  79.3
+p_loo        35.6   0.7
+looic     15396.0 158.5
+------
+MCSE of elpd_loo is 0.1.
+MCSE and ESS estimates assume MCMC draws (r_eff in [0.9, 1.9]).
+
+All Pareto k estimates are good (k < 0.7).
+See help('pareto-k-diagnostic') for details.
+
+
+> summary(pareto_k_interact)
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+-0.24223 -0.07293 -0.02562 -0.02826  0.04564  0.20133 
