@@ -1,1 +1,11 @@
+Diagnostic Thresholds:
+k < 0.5: Very good, highly reliable.
+
+0.5 ≤ k < 0.7: Good, generally reliable.
+
+0.7 ≤ k < 1: Potentially problematic, suggesting influential points or model misspecification.
+
+k ≥ 1: Unreliable, indicating that PSIS fails for those points, and exact LOO-CV or model refitting may be needed.
+
+
 
