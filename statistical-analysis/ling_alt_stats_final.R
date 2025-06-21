@@ -87,11 +87,6 @@ ggplot(effects_df, aes(x = Predictor, y = Estimate)) +
   theme_minimal() +
   theme(axis.text.y = element_text(size = 10))
 
-
-
-# Posterior predictive checks
-pp_check(bayesian_mdl_1, type = "dens_overlay")
-
 # Model evaluation
 library(loo)
 loo_result <- loo(bayesian_mdl_1)
@@ -170,7 +165,8 @@ pairwise_interactions <- c( "negation:passivization",
                              "noun.mod:More.than.10.Const",
                              "Adv:More.than.5.Less.than.10.Const", 
                              "Adv:More.than.10.Const", 
-                             "More.than.1.Adv:More.than.5.Less.than.10.Const",                           "More.than.1.Adv:More.than.10.Const" 
+                             "More.than.1.Adv:More.than.5.Less.than.10.Const",                           
+                             "More.than.1.Adv:More.than.10.Const" 
                           )
 # Construct formula with main effects and interactions
 formula_interaction <- as.formula(
